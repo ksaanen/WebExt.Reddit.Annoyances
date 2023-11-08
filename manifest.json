@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Reddit Annoyances",
+  "description": "Better experience for mobile Firefox users",
+  "version": "0.0.1",
+  "icons": {
+    "64": "icons/icon.png"
+  },
+  "permissions": [
+    "storage",
+    "cookies"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.reddit.com/*",
+        "*://*.redd.it/*"
+      ],
+      "js": [
+        "content_script.js"
+      ]
+    }
+  ]
+}
