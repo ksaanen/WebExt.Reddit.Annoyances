@@ -1,0 +1,12 @@
+body {
+    pointer-events: unset !important;
+    overflow: unset !important;
+}
+
+body reddit-cookie-banner {
+    display: none !important;
+}
+
+body shreddit-experience-tree {
+    display: none !important;
+}
