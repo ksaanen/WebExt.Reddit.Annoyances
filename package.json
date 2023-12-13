@@ -9,5 +9,8 @@
     "lint": "web-ext lint"
   },
   "author": "Kevin Saanen",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "web-ext": "^7.9.0"
+  }
 }

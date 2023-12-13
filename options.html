@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addon settings</title>
+    <style>
+        :root {
+            --default-margin: 20px;
+            --default-input-spacing: 10px;
+            --disabled-color: #CCC;
+        }
+        .container {
+            margin: var(--default-margin);
+        }
+        .disabled {
+            color: var(--disabled-color);
+        }
+        .input-group {
+            display: flex;
+            gap: var(--default-input-spacing);
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="my-3">
+            <div class="input-group">
+                <input disabled class="form-check-input" name="write_cookie" type="checkbox" />
+                <label class="disabled" for="write_cookie">Write "reject non-essential cookies" cookie.</label>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
