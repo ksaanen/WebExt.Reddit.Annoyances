@@ -10,27 +10,63 @@
             --default-input-spacing: 10px;
             --disabled-color: #CCC;
         }
+        h1, h2, h3, h4, h5, h6 {margin: 0}
+        h1 {
+            font-size: 2em;
+        }
         .container {
             margin: var(--default-margin);
-        }
-        .disabled {
-            color: var(--disabled-color);
         }
         .input-group {
             display: flex;
             gap: var(--default-input-spacing);
             align-items: center;
+            margin-bottom: var(--default-input-spacing);
+        }
+        button {
+            background: rgb(255, 69, 0);
+            border: none;
+            padding: 7px 15px;
+            border-radius: 3px;
+            color: white;
+        }
+        button:hover {cursor: pointer;}
+        button:disabled {
+            background: lightgray;
+            cursor: default;
+        }
+        label i {
+            display: block;
+        }
+        .my-default {
+            margin-top: var(--default-margin);
+            margin-bottom: var(--default-margin);
+        }
+        .py-default {
+            padding-top: var(--default-margin);
+            padding-bottom: var(--default-margin);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <form class="my-3">
+        <h1>Reddit Annoyances settings</h1>
+        <p>
+            Below are optional features where you can further customize your experience. I may add some more in the future from user feedback.
+        </p>
+        <form>
             <div class="input-group">
-                <input disabled class="form-check-input" name="write_cookie" type="checkbox" />
-                <label class="disabled" for="write_cookie">Write "reject non-essential cookies" cookie.</label>
+                <input id="rejectNonEssential" class="form-check-input" name="rejectNonEssential" type="checkbox" />
+                <label for="rejectNonEssential">Write "reject non-essential cookies" cookie. <i>Another approach to getting rid of the cookiewall, may reduce flickering effect from loading style overrides.</i></label>
             </div>
+            <div class="input-group">
+                <input id="unfixHeader" class="form-check-input" name="unfixHeader" type="checkbox" />
+                <label for="unfixHeader">Unfix top header (mobile). <i>Enabling this makes the top header move with rest of the content on scroll.</i></label>
+            </div>
+            <hr class="my-default" />
+            <button disabled type="submit">Save</button>
         </form>
     </div>
+    <script src="options.js"></script>
 </body>
-</html>
+</html> 

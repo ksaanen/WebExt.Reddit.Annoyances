@@ -10,3 +10,7 @@ body reddit-cookie-banner {
 body shreddit-experience-tree {
     display: none !important;
 }
+
+body shreddit-app.header-unfix {
+    padding-top: unset !important;
+}
