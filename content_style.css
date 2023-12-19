@@ -3,6 +3,13 @@ body {
     overflow: unset !important;
 }
 
+body.scroll-disabled {
+    height: unset !important;
+    overflow: unset !important;
+    position: unset !important;
+    width: unset !important;
+}
+
 body reddit-cookie-banner {
     display: none !important;
 }

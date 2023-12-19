@@ -1,12 +1,13 @@
 {
   "name": "webext.reddit.annoyances",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "WebExtension for mobile Firefox users improving experience by auto setting \"Reject non-essential\" cookies and \"Continue with Firefox\".",
   "main": "content_script.js",
   "scripts": {
     "build": "web-ext build",
     "dev": "web-ext run",
-    "lint": "web-ext lint"
+    "lint": "web-ext lint",
+    "debug:android": "web-ext run -t firefox-android --android-device=emulator-5554"
   },
   "author": "Kevin Saanen",
   "license": "ISC",
