@@ -1,5 +1,5 @@
 function unfixHeader() {
-    document.querySelector("shreddit-app").classList.add("header-unfix");
+    document.querySelector("body").classList.add("header-unfix");
     document.querySelector("reddit-header-small").classList.remove("fixed");
 }
 

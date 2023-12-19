@@ -7,10 +7,16 @@ body reddit-cookie-banner {
     display: none !important;
 }
 
-body shreddit-experience-tree {
+body shreddit-experience-tree,
+body .XPromoPopupRpl {
     display: none !important;
 }
 
-body shreddit-app.header-unfix {
+/* ---- Unfix header --- */
+body.header-unfix shreddit-app,
+body.header-unfix .App .NavFrame__below-top-nav {
     padding-top: unset !important;
+}
+body.header-unfix .App .TopNav {
+    position: unset !important;
 }
