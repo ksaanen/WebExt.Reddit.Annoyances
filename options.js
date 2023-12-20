@@ -1,18 +1,16 @@
 const submitButton = document.querySelector("button[type=submit]");
 
-function saveOptions(e) {
-    e.preventDefault();
+function saveOption(input) {
     browser.storage.sync.set({
-        rejectNonEssential: document.querySelector("#rejectNonEssential").checked,
-        unfixHeader: document.querySelector("#unfixHeader").checked,
+        [input.name]: input.checked,
     });
-    submitButton.setAttribute("disabled", true);
 }
 
 function restoreOptions() {
     function setCurrentChoice(result) {
-        document.querySelector("#rejectNonEssential").checked = result.rejectNonEssential || false;
-        document.querySelector("#unfixHeader").checked = result.unfixHeader || false;
+        result.forEach((setting, checked) => {
+            document.querySelector(`#${setting}`).checked = checked || false
+        });
     }
 
     function onError(error) {
@@ -23,11 +21,7 @@ function restoreOptions() {
     getting.then(setCurrentChoice, onError); 
 } 
 
-document.querySelectorAll("input").forEach(function(input) {
-    input.addEventListener("click", function() {
-        submitButton.removeAttribute("disabled")
-    });
-});
-
 document.addEventListener("DOMContentLoaded", restoreOptions);
-document.querySelector("form").addEventListener("submit", saveOptions);
+document.querySelectorAll("input[type=checkbox]").forEach(input => {
+    input.addEventListener("click", () => saveOption(input));
+});
