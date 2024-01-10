@@ -27,3 +27,9 @@ body.header-unfix .App .NavFrame__below-top-nav {
 body.header-unfix .App .TopNav {
     position: unset !important;
 }
+
+/* ---- Debug mode --- */
+.debug-mode--container {
+    background: red;
+    height: 30px;
+}

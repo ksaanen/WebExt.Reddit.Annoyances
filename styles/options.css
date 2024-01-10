@@ -1,0 +1,41 @@
+:root {
+    --default-margin: 20px;
+    --default-input-spacing: 10px;
+    --disabled-color: #CCC;
+}
+h1, h2, h3, h4, h5, h6 {margin: 0}
+h1 {
+    font-size: 2em;
+}
+.container {
+    margin: var(--default-margin);
+}
+.input-group {
+    display: flex;
+    gap: var(--default-input-spacing);
+    align-items: center;
+    margin-bottom: var(--default-input-spacing);
+}
+button {
+    background: rgb(255, 69, 0);
+    border: none;
+    padding: 7px 15px;
+    border-radius: 3px;
+    color: white;
+}
+button:hover {cursor: pointer;}
+button:disabled {
+    background: lightgray;
+    cursor: default;
+}
+label i {
+    display: block;
+}
+.my-default {
+    margin-top: var(--default-margin);
+    margin-bottom: var(--default-margin);
+}
+.py-default {
+    padding-top: var(--default-margin);
+    padding-bottom: var(--default-margin);
+}

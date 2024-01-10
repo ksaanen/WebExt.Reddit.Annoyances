@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "allowJs": true,
+        "target": "ES2015",
+        "module": "ES2015",
+        "moduleResolution": "Node",
+        "lib": [
+            "ES2016",
+            "DOM",
+            "ES5"
+        ]
+    },
+    "include": ["./src/**/*"]
+}

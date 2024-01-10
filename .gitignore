@@ -131,3 +131,6 @@ dist
 
 # build output from web-ext
 web-ext-artifacts/
+
+# compiled output
+dist

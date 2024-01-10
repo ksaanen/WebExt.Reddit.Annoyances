@@ -27,11 +27,12 @@
         "*://*.redd.it/*"
       ],
       "css": [
-        "content_style.css"
+        "styles/content_style.css"
       ],
       "js": [
-        "content_script.js"
-      ]
+        "dist/content_script.js"
+      ],
+      "run_at": "document_end"
     }
   ],
   "browser_specific_settings": {
