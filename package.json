@@ -8,6 +8,7 @@
     "dev": "web-ext run",
     "lint": "web-ext lint",
     "tsc": "tsc",
+    "watch": "tsc -w",
     "debug:android": "web-ext run -t firefox-android --android-device=emulator-5554"
   },
   "author": "Kevin Saanen",

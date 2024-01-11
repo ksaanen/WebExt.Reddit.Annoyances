@@ -18,19 +18,19 @@ class ContentScript {
         });
     }
 
-    private debugMode() {
+    private debugMode(): void {
         const el = document.createElement('div');
         el.classList.add('debug-mode--container');
         this.body.prepend(el);
     }
 
-    private unfixHeader() {
+    private unfixHeader(): void {
         this.body.classList.add("header-unfix");
         const header = document.querySelector("reddit-header-small");
         if (header) header.classList.remove("fixed");
     }
 
-    private rejectNonEssential() {
+    private rejectNonEssential(): void {
         const d = new Date();
         const exdays = 365;
         d.setTime(d.getTime() + (exdays*24*60*60*1000));

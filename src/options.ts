@@ -35,28 +35,40 @@ class Options {
             optionsConfig.forEach(option => {
                 option.checked = result[option.name] || false;
 
-                const el = document.createElement('div');
-                el.classList.add('input-group');
-    
-                const input = document.createElement('input');
-                input.id = option.name;
-                input.type = "checkbox";
-                input.classList.add('form-check-input');
-                input.checked = option.checked;
-                input.onchange = () => this.saveOption(option.name, !!input.checked);
-    
-                const label = document.createElement('label');
-                label.setAttribute('for', input.id);
-                label.innerText = option.description;
-    
-                el.append(input);
-                el.append(label);
-                this.placeholder.append(el);
+                const group: HTMLDivElement = document.createElement('div');
+                group.classList.add('d-flex', 'gap-20', 'flex-align-start');
+
+                    const description: HTMLDivElement = document.createElement('div');
+                    description.classList.add('flex-grow');
+                    description.innerText = option.description;
+                    group.append(description);
+
+                    const div: HTMLDivElement = document.createElement('div');
+                    group.append(div);
+
+                        const label: HTMLLabelElement = document.createElement('label');
+                        label.classList.add('switch');
+                        label.setAttribute('for', option.name);
+                        div.append(label);
+
+                            const input: HTMLInputElement = document.createElement('input');
+                            input.id = option.name;
+                            input.type = "checkbox";
+                            input.classList.add('form-check-input');
+                            input.checked = option.checked;
+                            input.onchange = () => this.saveOption(option.name, !!input.checked);
+                            label.append(input);
+
+                            const span: HTMLSpanElement = document.createElement('span');
+                            span.classList.add('slider');
+                            label.append(span);
+
+                this.placeholder.append(group);
             });
         }, (error) => console.log(`Error: ${error}`));
     }
 
-    saveOption(option: string, value: boolean) {
+    private saveOption(option: string, value: boolean): void {
         browser.storage.sync.set({[option]: value});
     }
 }
