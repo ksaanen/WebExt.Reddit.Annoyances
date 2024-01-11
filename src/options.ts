@@ -21,7 +21,7 @@ export const optionsConfig: Option[] = [
     },
     {
         name: optionsEnum.debugMode,
-        description: 'Enable debug mode (in development).',
+        description: 'Generate log message that\'s usefull for the developer feedback.',
     }
 ];
 
