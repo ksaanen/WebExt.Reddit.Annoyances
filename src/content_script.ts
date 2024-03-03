@@ -1,6 +1,7 @@
 enum optionsEnum {
     rejectNonEssential = "rejectNonEssential",
     unfixHeader = "unfixHeader",
+    hidePromoted = "hidePromoted",
     debugMode = "debugMode"
 }
 
@@ -12,6 +13,7 @@ class ContentScript {
         getting.then((result) => {
             if (result[optionsEnum.unfixHeader]) this.unfixHeader();
             if (result[optionsEnum.rejectNonEssential]) this.rejectNonEssential();
+            if (result[optionsEnum.hidePromoted]) this.hidePromoted();
             if (result[optionsEnum.debugMode]) this.debugMode();
         }, (error) => {
             console.log(`Error: ${error}`);
@@ -44,6 +46,10 @@ class ContentScript {
         container.append(log);
 
         this.body.append(container);
+    }
+
+    private hidePromoted() { 
+        this.body.classList.add("hide-promoted");
     }
 
     private unfixHeader() {

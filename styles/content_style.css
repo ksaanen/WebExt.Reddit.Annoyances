@@ -28,6 +28,13 @@ body.header-unfix .App .TopNav {
     position: unset !important;
 }
 
+.hide-promoted shreddit-ad-post,
+.hide-promoted .promotedlink,
+.hide-promoted hr + shreddit-ad-post + hr,
+.hide-promoted hr + .promotedlink + hr {
+    display: none;
+}
+
 /* ---- Debug mode --- */
 .debug-mode--container {
     box-sizing: border-box;

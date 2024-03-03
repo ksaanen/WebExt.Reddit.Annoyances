@@ -29,6 +29,13 @@
       "css": [
         "styles/content_style.css"
       ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "*://*.reddit.com/*",
+        "*://*.redd.it/*"
+      ],
       "js": [
         "dist/content_script.js"
       ],

@@ -1,6 +1,7 @@
 export enum optionsEnum {
     rejectNonEssential = "rejectNonEssential",
     unfixHeader = "unfixHeader",
+    hidePromoted = "hidePromoted",
     debugMode = "debugMode"
 }
 
@@ -20,8 +21,12 @@ export const optionsConfig: Option[] = [
         description: 'Unfix top header (mobile). Enabling this makes the top header move with rest of the content on scroll.',
     },
     {
+        name: optionsEnum.hidePromoted,
+        description: 'Hide promoted content',
+    },
+    {
         name: optionsEnum.debugMode,
-        description: 'Generate log message that\'s usefull for the developer feedback.',
+        description: 'Generate log message that may be usefull for developer feedback.',
     }
 ];
 
