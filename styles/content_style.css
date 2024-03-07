@@ -20,14 +20,12 @@ body .XPromoPopupRpl {
 }
 
 /* ---- Unfix header --- */
-body.header-unfix shreddit-app,
-body.header-unfix .App .NavFrame__below-top-nav {
-    padding-top: unset !important;
-}
-body.header-unfix .App .TopNav {
-    position: unset !important;
+body.header-unfix .App .TopNav,
+body.header-unfix shreddit-app > reddit-header-small {
+    position: absolute !important;
 }
 
+/* ---- Promoted content --- */
 .hide-promoted shreddit-ad-post,
 .hide-promoted .promotedlink,
 .hide-promoted hr + shreddit-ad-post + hr,
