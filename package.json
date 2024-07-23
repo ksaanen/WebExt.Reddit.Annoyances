@@ -1,6 +1,6 @@
 {
   "name": "webext.reddit.annoyances",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "WebExtension for mobile Firefox users improving experience by auto setting \"Reject non-essential\" cookies and \"Continue with Firefox\".",
   "main": "content_script.js",
   "scripts": {
@@ -14,8 +14,8 @@
   "author": "Kevin Saanen",
   "license": "ISC",
   "devDependencies": {
-    "@types/firefox-webext-browser": "^120.0.0",
-    "web-ext": "^7.9.0",
-    "typescript": "^5.3.3"
+    "@types/firefox-webext-browser": "^120.0.4",
+    "web-ext": "^8.2.0",
+    "typescript": "^5.5.4"
   }
 }

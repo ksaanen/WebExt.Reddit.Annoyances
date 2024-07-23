@@ -16,7 +16,8 @@ body reddit-cookie-banner {
 
 body shreddit-experience-tree,
 body .XPromoPopupRpl,
-body xpromo-app-selector {
+body xpromo-app-selector,
+body [bundlename='app_selector'] {
     display: none !important;
 }
 
