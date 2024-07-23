@@ -15,7 +15,8 @@ body reddit-cookie-banner {
 }
 
 body shreddit-experience-tree,
-body .XPromoPopupRpl {
+body .XPromoPopupRpl,
+body xpromo-app-selector {
     display: none !important;
 }
 
